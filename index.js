@@ -31,11 +31,7 @@ function searchWeather() {
             const weatherInfoContainer = document.getElementById("weatherInfo");
             weatherInfoContainer.innerHTML = ` <p>Veuillez entrer une ville valide</p>`;
         })
-    // Replace the below line with your API call to fetch weather data for the entered city
-    // For simplicity, I'm assuming the weather data is retrieved from an API
-
 }
-//searchWeather();
 
 function displayWeather(data) {
     const weatherInfoContainer = document.getElementById("weatherInfo");
