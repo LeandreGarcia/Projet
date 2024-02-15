@@ -1,9 +1,8 @@
 const apiKey = "8ffb64bee3a847ce9b9102913241502";
 
 function searchWeather() {
-    let city = "paris"
     const cityName = document.getElementById("searchInput").value;
-    const apiUrl = "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + cityName;
+    const apiUrl = "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + cityName + "&lang=fr";
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -12,7 +11,7 @@ function searchWeather() {
             return response.json()
         })
         .then(data => {
-            console.log(data);
+            //console.log(data);
             const weatherData = {
                 cityName: data.location.name,
                 temperature: data.current.temp_c + "°c",
@@ -20,13 +19,15 @@ function searchWeather() {
                 humidity: data.current.humidity + "%",
                 windSpeed: Math.floor(data.current.wind_kph) + " Km/H"
             };
-            console.log(weatherData.cityName)
+            //console.log(weatherData.cityName)
 
             displayWeather(weatherData);
             //outputElement.textContent = JSON.stringify(data, null, 2);
         })
         .catch(error => {
             console.error('Error:', error);
+            const weatherInfoContainer = document.getElementById("weatherInfo");
+            weatherInfoContainer.innerHTML = ` <p>Veuillez entrer une ville valide</p>`;
         })
     // Replace the below line with your API call to fetch weather data for the entered city
     // For simplicity, I'm assuming the weather data is retrieved from an API
