@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    /* Dégradé de bleu à blanc */
+    background: linear-gradient(to bottom right, #007bff, #ffffff);
+    /* Empêche le dégradé de se répéter verticalement */
+    background-repeat: no-repeat;
+    /* Garantit que le dégradé s'étend sur toute la hauteur de la fenêtre */
+    background-size: cover;
+}
