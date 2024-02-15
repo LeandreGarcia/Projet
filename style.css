@@ -78,7 +78,7 @@ nav p {
 }
 
 .weather-info {
-    margin-top: 20px;
+    margin-top: -130px;
 }
 
 .weather-info img {
@@ -88,4 +88,5 @@ nav p {
 
 .weather-info p {
     margin: 5px 0;
+    margin-top: auto;
 }
