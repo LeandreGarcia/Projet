@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Météo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header class="m-1">
+        <h1 class="flotte">Météo</h1>
+        <nav class="float" style="line-height:95px">
+            <p>LOCATION</p>
+            <p>ABOUT US</p>
+            <p>CONTACT</p>
+        </nav>
+    </header>
 
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Entrez une ville...">
+            <button onclick="searchWeather()">Rechercher</button>
+        </div>
+        <div id="weatherInfo">
+           
+        </div>
+    </main>
+
+    <footer>
+       
+    </footer>
+
+    <script src="index.js"></script>
 </body>
-
 </html>
+

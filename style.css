@@ -1,13 +1,83 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+html {
+	font-size: 62.5%; 
 }
+
 body {
-    /* Dégradé de bleu à blanc */
-    background: linear-gradient(to bottom right, #007bff, #ffffff);
-    /* Empêche le dégradé de se répéter verticalement */
-    background-repeat: no-repeat;
-    /* Garantit que le dégradé s'étend sur toute la hauteur de la fenêtre */
-    background-size: cover;
+	font-size: 1.6rem;
 }
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom right, #c7ebf7, #0383ec);
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    height: 50px;
+}
+
+footer {
+    margin-top: -15px;
+}
+
+.m-1 {
+    padding: 10px;
+    height: 120px;
+}
+
+.flotte {
+    float:left;
+}
+.float {
+    float: right;
+    margin-right: 30px;
+    display:flex;
+}
+
+nav p {
+    margin-right: 50px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    top:170px;
+}
+
+.search-container input[type=text] {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #6274A0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left:-15px;
+}
+
+#weatherInfo {
+    text-align: center;
+    padding: 23%;
+    border-radius: 10px;
+}
+
+.weather-info {
+    margin-top: 20px;
+}
+
+.weather-info img {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-info p {
+    margin: 5px 0;
+}
+
