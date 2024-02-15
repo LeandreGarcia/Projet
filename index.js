@@ -3,7 +3,7 @@ const apiKey = "8ffb64bee3a847ce9b9102913241502";
 function searchWeather() {
     let city = "paris"
     const cityName = document.getElementById("searchInput").value;
-    const apiUrl = "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + city;
+    const apiUrl = "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + cityName;
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -17,8 +17,8 @@ function searchWeather() {
                 cityName: data.location.name,
                 temperature: data.current.temp_c + "°c",
                 weatherImage: data.current.condition.icon,
-                humidity: data.current.humidity +"%",
-                windSpeed: Math.floor(data.current.wind_kph)+" Km/H"
+                humidity: data.current.humidity + "%",
+                windSpeed: Math.floor(data.current.wind_kph) + " Km/H"
             };
             console.log(weatherData.cityName)
 
@@ -32,7 +32,7 @@ function searchWeather() {
     // For simplicity, I'm assuming the weather data is retrieved from an API
 
 }
-searchWeather();
+//searchWeather();
 
 function displayWeather(data) {
     const weatherInfoContainer = document.getElementById("weatherInfo");
