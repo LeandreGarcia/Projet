@@ -11,7 +11,7 @@ function searchWeather() {
             return response.json()
         })
         .then(data => {
-            //console.log(data);
+            console.log(data);
             const weatherData = {
                 cityName: data.location.name,
                 temperature: data.current.temp_c + "°c",
@@ -47,3 +47,9 @@ function displayWeather(data) {
         </div>
     `;
 }
+
+document.getElementById("searchInput").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        searchWeather();
+    }
+});
