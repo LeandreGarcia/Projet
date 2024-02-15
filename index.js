@@ -14,10 +14,12 @@ function searchWeather() {
             console.log(data);
             const weatherData = {
                 cityName: data.location.name,
+                country: data.location.country,
                 temperature: data.current.temp_c + "°c",
                 weatherImage: data.current.condition.icon,
                 humidity: data.current.humidity + "%",
-                windSpeed: Math.floor(data.current.wind_kph) + " Km/H"
+                windSpeed: Math.floor(data.current.wind_kph) + " Km/H",
+                meteo: data.current.condition.text
             };
             //console.log(weatherData.cityName)
 
@@ -39,8 +41,9 @@ function displayWeather(data) {
     const weatherInfoContainer = document.getElementById("weatherInfo");
     weatherInfoContainer.innerHTML = `
         <div class="weather-info">
-            <h2>Voici la météo pour ${data.cityName}</h2>
+            <h2>Voici la météo pour ${data.cityName}, ${data.country}</h2>
             <img src="${data.weatherImage}" alt="Weather">
+            <p>${data.meteo}</p>
             <p>Température: ${data.temperature}</p>
             <p>Taux d'humidité: ${data.humidity}</p>
             <p>Vent: ${data.windSpeed}</p>

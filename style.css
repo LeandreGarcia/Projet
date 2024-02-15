@@ -1,9 +1,9 @@
 html {
-	font-size: 62.5%; 
+    font-size: 62.5%;
 }
 
 body {
-	font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
 body {
@@ -12,7 +12,8 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header, footer {
+header,
+footer {
     text-align: center;
     padding: 20px;
     height: 50px;
@@ -28,12 +29,13 @@ footer {
 }
 
 .flotte {
-    float:left;
+    float: left;
 }
+
 .float {
     float: right;
     margin-right: 30px;
-    display:flex;
+    display: flex;
 }
 
 nav p {
@@ -44,7 +46,7 @@ nav p {
     margin-bottom: 20px;
     text-align: center;
     position: relative;
-    top:170px;
+    top: 170px;
 }
 
 .search-container input[type=text] {
@@ -59,7 +61,7 @@ nav p {
     color: white;
     border: none;
     cursor: pointer;
-    margin-left:-15px;
+    margin-left: -15px;
 }
 
 #weatherInfo {
@@ -80,4 +82,3 @@ nav p {
 .weather-info p {
     margin: 5px 0;
 }
-
