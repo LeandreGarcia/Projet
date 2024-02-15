@@ -1,12 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Fetch</title>
-    <script src="js/index.js" defer></script>
+    <title>Météo</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <header class="m-1">
+        <h1 class="flotte">Météo</h1>
+        <nav class="float">
+            <p>LOCATION</p>
+            <p>ABOUT US</p>
+            <p>CONTACT</p>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Entrez une ville...">
+            <button onclick="searchWeather()">Rechercher</button>
+        </div>
+        <div id="weatherInfo">
+
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="https://www.weatherapi.com/" title="Free Weather API"><img
+                src='https://cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com"
+                ></a>
+            <p>Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a></p>
+        </nav>
+    </footer>
     
+<!--https:${data.weatherImage}-->
+    <script src="js/index.js"></script>
 </body>
+
 </html>
