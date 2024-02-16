@@ -17,7 +17,6 @@ body {
 header,
 footer {
     text-align: center;
-    /* padding-bottom: 20px; */
     height: 50px;
 }
 
@@ -77,11 +76,14 @@ nav p {
 
 #weatherInfo {
     text-align: center;
-    padding-top: 25%;
+    padding-top: 15%;
     padding-bottom: 10%;
     border-radius: 10px;
 }
 
+.weather-info {
+    margin-top: -120px;
+}
 
 .weather-info img {
     width: 100px;
@@ -90,5 +92,4 @@ nav p {
 
 .weather-info p {
     margin: 5px 0;
-    margin-top: auto;
 }
