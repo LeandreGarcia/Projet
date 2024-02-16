@@ -1,8 +1,7 @@
 const apiKey = "8ffb64bee3a847ce9b9102913241502";
-
 function searchWeather() {
     const cityName = document.getElementById("searchInput").value;
-    const apiUrl = "http://api.weatherapi.com/v1/current.json?key=" + apiKey + "&q=" + cityName + "&lang=fr";
+    const apiUrl = "https://api.weatherapi.com/v1/forecast.json?key=" + apiKey + "&q=" + cityName + "&lang=fr&days=3&aqi=no&alerts=no"
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
@@ -12,6 +11,7 @@ function searchWeather() {
         })
         .then(data => {
             console.log(data);
+            console.log(data.forecast.forecastday[1].date)
             const weatherData = {
                 cityName: data.location.name,
                 country: data.location.country,
@@ -19,12 +19,16 @@ function searchWeather() {
                 weatherImage: data.current.condition.icon,
                 humidity: data.current.humidity + "%",
                 windSpeed: Math.floor(data.current.wind_kph) + " Km/H",
-                meteo: data.current.condition.text
+                meteo: data.current.condition.text,
+                otherForecast: data.forecast.forecastday
+
             };
             //console.log(weatherData.cityName)
 
             displayWeather(weatherData);
+            displayOtherForecast(weatherData);
             //outputElement.textContent = JSON.stringify(data, null, 2);
+            
         })
         .catch(error => {
             console.error('Error:', error);
@@ -45,6 +49,26 @@ function displayWeather(data) {
             <p>Vent: ${data.windSpeed}</p>
         </div>
     `;
+    const forecastContainerOnce = document.getElementById("daysForecasts");
+    const titleForecast = `
+    <h3>Les previsions des 3 prochains jours</h3>
+    `
+    forecastContainerOnce.innerHTML += titleForecast
+}
+
+function displayOtherForecast(data){
+    const forecastContainer = document.getElementById("daysForecasts");
+    const datess = data.otherForecast;
+ datess.forEach(date => {
+    const forecastTemplate = `
+    <div class="frctClass">
+                <p>Le: ${date.date}<br>
+                Température: ${date.day.avgtemp_c}<br>
+                <img src="https:${date.day.condition.icon}" class="imgFWeather" alt="Weather of future days"><br>
+                ${date.day.condition.text}</p>
+            </div>`
+    forecastContainer.innerHTML += forecastTemplate
+});
 }
 
 document.getElementById("searchInput").addEventListener("keypress", function (event) {

@@ -96,20 +96,35 @@ nav p {
 
 .weather-info {
     /*margin-top: -120px;*/
-    top: 55%;
+    top: 50%;
 }
 
 .weather-info img {
-    width: 120px;
-    height: 120px;
+    width: 70px;
+    height: 70px;
 }
 
 .weather-info p {
     margin: 5px 0;
     margin-top: auto;
 }
-
-
+#daysForecasts{
+    height: 10%;
+    text-align: center;
+}
+#daysForecasts .frctClass{
+    display: inline-block;
+    text-align: center;
+    margin: 1%;
+    padding: 2;
+}
+.frctClass p{
+    font-family: Roboto, Arial, sans-serif;
+}
+.imgFWeather{
+    width: 100%;
+    max-width: 45px;
+}
 
 
 
