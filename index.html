@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+3D&display=swap"
+        rel="stylesheet">
     <title>Météo</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,7 +15,7 @@
 <body>
     <header class="m-1">
         <h1 class="flotte">Météo</h1>
-        <nav class="float" style="line-height:95px">
+        <nav class="float">
             <p>LOCATION</p>
             <p>ABOUT US</p>
             <p>CONTACT</p>
@@ -25,18 +30,20 @@
         <div id="weatherInfo">
 
         </div>
+        <div id="daysForecasts">
+        </div>
     </main>
 
     <footer>
         <nav>
             <a href="https://www.weatherapi.com/" title="Free Weather API"><img
-                src='//cdn.weatherapi.com/v4/images/weatherapi_logo.png' alt="Weather data by WeatherAPI.com"
-                border="0"></a>
+                    src='https://cdn.weatherapi.com/v4/images/weatherapi_logo.png'
+                    alt="Weather data by WeatherAPI.com"></a>
             <p>Powered by <a href="https://www.weatherapi.com/" title="Weather API">WeatherAPI.com</a></p>
         </nav>
     </footer>
-    
 
+    <!--https:${data.weatherImage}-->
     <script src="index.js"></script>
 </body>
 
