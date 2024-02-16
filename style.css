@@ -58,7 +58,7 @@ nav p {
 }
 
 .search-container {
-    margin-bottom: 20px;
+    margin-bottom: 10%;
     text-align: center;
     position: relative;
     /* top: 170px; */
@@ -172,7 +172,7 @@ nav p {
     }
 
     .search-container {
-        margin-bottom: 20px;
+        margin-bottom: 10%;
         position: relative;
         text-align: center;
     }
